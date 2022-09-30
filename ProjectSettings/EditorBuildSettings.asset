@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/SalaDeEspera.unity
+    guid: a60fa481c0e2e0f4e91b765381cf33f4
+  - enabled: 1
+    path: Assets/Scenes/SalaDeConsulta.unity
+    guid: 9601754afd3dbc24188e4ffd739f359c
+  - enabled: 1
+    path: Assets/Scenes/Casa.unity
+    guid: 251eb1888b598574d874fb06f77c8126
   m_configObjects: {}
