@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Porta : MonoBehaviour
 {
-    public string porta;
+    /*public string porta;
     public GameObject telaDeInteracao;
 
     private void Start()
@@ -13,7 +13,7 @@ public class Porta : MonoBehaviour
         telaDeInteracao.SetActive(false);
     }
 
-    private void OnTriggerStay2D(Collider2D colisor)
+    public void OnTriggerStay2D(Collider2D colisor)
     {
         Debug.Log("Aperte E");
         telaDeInteracao.SetActive(true);
@@ -50,8 +50,8 @@ public class Porta : MonoBehaviour
         
     }
 
-    private void OnTriggerExit2D(Collider2D colisor)
+    public void OnTriggerExit2D(Collider2D colisor)
     {
         telaDeInteracao.SetActive(false);
-    }
+    }*/
 }
