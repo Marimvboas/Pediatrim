@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+<<<<<<< HEAD
 using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
@@ -50,4 +51,21 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(1f);
         moveIsBlocked = false;
     }
+=======
+
+public class Player : MonoBehaviour
+{
+    [SerializeField] Vector2 direction;
+    [SerializeField] float speed;
+
+    void Start()
+    {
+        
+    }
+    void Update()
+    {
+        direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        transform.Translate(direction * speed * Time.deltaTime);
+    }
+>>>>>>> ac78bc52eedc678ad8f4491a3484b55b0e8c70a9
 }
