@@ -4,11 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class MenuPrincipal : MonoBehaviour
+public class SceneManag : MonoBehaviour
 {
-    public void Jogar()
+    [SerializeField] string cenaName;
+    public void Change()
     {
-        SceneManager.LoadScene("SalaDeEspera");
+        SceneManager.LoadScene(cenaName);
     }
 
     public void SairDoJogo()
