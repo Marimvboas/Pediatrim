@@ -225,6 +225,7 @@ MonoBehaviour:
   nomeCena: 
   anim: {fileID: 0}
   sp: {fileID: 0}
+  botaoE: {fileID: 3238038812928235269}
 --- !u!61 &5715746488704116053
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 public class DocManage : MonoBehaviour
 {
     [SerializeField] GameObject content;
-    
+
     public void OpenDocument()
     {
         content.SetActive(true);
