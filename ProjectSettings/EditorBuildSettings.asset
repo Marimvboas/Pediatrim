@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SalaDeConsult.unity
     guid: 0657d5d5c5009ab47a29c9f02e459d0d
+  - enabled: 1
+    path: Assets/Scenes/AlturaEPeso.unity
+    guid: 731a7ab64f35e48479d1ce7756ca045e
   m_configObjects: {}
