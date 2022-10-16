@@ -10,16 +10,16 @@ public class MouseEmboloSangue : MonoBehaviour
 
     public GameObject sangueSeringa;
     [SerializeField] private float mlSangue;
-    private float mlMax = 2f;
+    private float mlMax = 1f;
     private bool lockDistance = true;
     private bool finalizou = false;
     public GameObject indicador;
 
     void Start()
     {
-        mlSangue = Random.Range(0.5f, 2f);
+        mlSangue = Random.Range(0.25f, 1f);
         //dist = GameObject.GetComponent<DistanceJoint2D>();
-        indicador.transform.position = new Vector2(indicador.transform.position.x+0.7071f*mlSangue, indicador.transform.position.y-0.7071f*mlSangue);
+        indicador.transform.position = new Vector2(indicador.transform.position.x+(0.7071f*mlSangue*2), indicador.transform.position.y-(0.7071f*mlSangue*2));
     }
 
     void Update()
@@ -42,7 +42,7 @@ public class MouseEmboloSangue : MonoBehaviour
 
     private void OnMouseUp()
     {
-        if((sangueSeringa.transform.localScale.y<mlSangue+0.1f)&&(sangueSeringa.transform.localScale.y>mlSangue-0.1f))
+        if((sangueSeringa.transform.localScale.y<mlSangue+0.04f)&&(sangueSeringa.transform.localScale.y>mlSangue-0.04f))
         {
             finalizou = true;
             Debug.Log("final");
