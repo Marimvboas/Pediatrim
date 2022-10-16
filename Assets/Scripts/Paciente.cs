@@ -10,5 +10,6 @@ public class Paciente : MonoBehaviour
     public string Idade { get => idade; }
     public string Altura { get => altura; }
     public string Peso { get => peso; }
-    public string Sexo { get => sexo; }
+    public string Sexo { get => sexo; }  
+
 }
