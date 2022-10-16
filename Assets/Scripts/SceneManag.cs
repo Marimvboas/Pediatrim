@@ -9,6 +9,10 @@ public class SceneManag : MonoBehaviour
     [SerializeField] string cenaName;
     public void Change()
     {
+        if(cenaName=="Casa"){
+            Player.day++; 
+            Debug.Log("Day:"+Player.day);
+        } 
         SceneManager.LoadScene(cenaName);
     }
 

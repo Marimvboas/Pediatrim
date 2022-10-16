@@ -102,3 +102,8 @@ MonoBehaviour:
   altura: 1,28 m
   peso: 39Kg
   sexo: Feminino
+  sintomas:
+  - Sintoma1
+  - Sintoma2
+  - Sintoma3
+  - Sintoma4
