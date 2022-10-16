@@ -34,6 +34,11 @@ public class ManageSintomasPaciente : MonoBehaviour
     void Update()
     {
         
-
+        if(ManageSintDoencas.verDoenca){
+            for(int i=0; i<numberSintomas;i++)
+            {
+                sintomasBut[i].SetActive(true);
+            } 
+        }
     }
 }

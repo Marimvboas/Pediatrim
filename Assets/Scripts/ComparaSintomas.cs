@@ -7,6 +7,7 @@ public class ComparaSintomas : MonoBehaviour
 {
     public static string palavra1="1", palavra2="2";
     public static bool acertou = false;
+    public static int count = 0;
 
     public static void ChecarAcerto()
     {
@@ -15,6 +16,7 @@ public class ComparaSintomas : MonoBehaviour
             {    
                 Debug.Log("São iguais");
                 acertou = true;
+                count++; //conta a quantidade de acertos
             }
             else
             {
@@ -23,5 +25,8 @@ public class ComparaSintomas : MonoBehaviour
                 Debug.Log("São diferentes");
             }
         //}
+        if(count == 3){
+            Debug.Log("Acertou os três sintomas");
+        } 
     }
 }

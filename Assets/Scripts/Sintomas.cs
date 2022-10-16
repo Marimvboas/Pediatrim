@@ -12,16 +12,30 @@ public class Sintomas : MonoBehaviour
 
     void Start()
     {
+        // tipoDoenca.text = ManageSintDoencas.tipoDoenca;
+        // Doenca doenca = new(tipoDoenca.text);
+        // for(int i=0; i<numberSintomas;i++)
+        // {
+        //     sintomas[i].text = doenca.Sintomas[i];
+        // }
+    }
+
+    void Update()
+    {
+        if(ManageSintDoencas.verDoenca){
+            GerarDadosDoenca();
+            ManageSintDoencas.verDoenca=false;
+        }
+    }
+
+    public void GerarDadosDoenca()
+    {
+        tipoDoenca.text = ManageSintDoencas.tipoDoenca;
         Doenca doenca = new(tipoDoenca.text);
         for(int i=0; i<numberSintomas;i++)
         {
             sintomas[i].text = doenca.Sintomas[i];
         }
-    }
-
-    void Update()
-    {
-        
     }
 }
 
@@ -44,11 +58,11 @@ public class Doenca
        switch(this.nome)
        {
            case ("Linfoma"):{
-                sintomasDoenca.Add("Sintoma1");
+                sintomasDoenca.Add("Aumento do baço");
                 sintomasDoenca.Add("Sintoma2");
-                sintomasDoenca.Add("Sintoma3");
+                sintomasDoenca.Add("Febre");
                 sintomasDoenca.Add("Sintoma4");
-                sintomasDoenca.Add("Sintoma5");
+                sintomasDoenca.Add("Coceira");
                 sintomasDoenca.Add("Sintoma6");
                 break;
             }
@@ -61,7 +75,7 @@ public class Doenca
                 sintomasDoenca.Add("");
                 break;
             }
-            case ("Tumor do Sistema Nervoso Central"):{
+            case ("Tumor do SNC"):{
                 sintomasDoenca.Add("");
                 sintomasDoenca.Add("");
                 sintomasDoenca.Add("");
@@ -72,29 +86,32 @@ public class Doenca
             }
             case ("Neuroblastoma"):{
                 sintomasDoenca.Add("");
+                sintomasDoenca.Add("Febre");
                 sintomasDoenca.Add("");
                 sintomasDoenca.Add("");
-                sintomasDoenca.Add("");
-                sintomasDoenca.Add("");
-                sintomasDoenca.Add("");
+                sintomasDoenca.Add("Sensação de estufamento abdominal");
+                sintomasDoenca.Add("Inchaço");
                 break;
             }
             case ("Tumor Ósseo"):{
+                sintomasDoenca.Add("Dor na região afetada");
+                sintomasDoenca.Add("Inchaço na região afetada");
                 sintomasDoenca.Add("");
+                sintomasDoenca.Add("Perda de peso");
                 sintomasDoenca.Add("");
-                sintomasDoenca.Add("");
-                sintomasDoenca.Add("");
-                sintomasDoenca.Add("");
-                sintomasDoenca.Add("");
+                sintomasDoenca.Add("Nódulo na região afetada");
                 break;
             }
             case ("Retinoblastoma"):{
                 sintomasDoenca.Add("");
+                sintomasDoenca.Add("Leucocoria");
                 sintomasDoenca.Add("");
+                sintomasDoenca.Add("Estrabismo");
+                sintomasDoenca.Add("Fotofobia");
                 sintomasDoenca.Add("");
-                sintomasDoenca.Add("");
-                sintomasDoenca.Add("");
-                sintomasDoenca.Add("");
+                break;
+            }
+            default:{
                 break;
             }
        }                    
