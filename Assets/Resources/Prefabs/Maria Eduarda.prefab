@@ -103,7 +103,7 @@ MonoBehaviour:
   peso: 34Kg
   sexo: Feminino
   sintomas:
-  - Sintoma1
-  - Sintoma2
-  - Sintoma3
-  - Sintoma4
+  - Estrabismo
+  - Fotofobia
+  - Leucocoria
+  - ...

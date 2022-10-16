@@ -103,7 +103,7 @@ MonoBehaviour:
   peso: 28Kg
   sexo: Masculino
   sintomas:
-  - Sintoma1
-  - Sintoma2
-  - Sintoma3
-  - Sintoma4
+  - Febre
+  - Coceira
+  - "Aumento do ba\xE7o"
+  - ...

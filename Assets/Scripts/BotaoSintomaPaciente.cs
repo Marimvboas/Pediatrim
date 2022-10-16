@@ -9,6 +9,7 @@ public class BotaoSintomaPaciente : MonoBehaviour
     public static string textSintoma;
     public static bool selecionou = false;
     public static GameObject botaoAcionado;
+    public static bool proximaDoenca = false;
 
     public void Update()
     {
@@ -19,7 +20,12 @@ public class BotaoSintomaPaciente : MonoBehaviour
         }
         else{
             botaoAcionado.SetActive(true);
-            //botaoAcionado = null;
+        }
+
+        if(proximaDoenca)
+        { //acho q esse if nao ta funcionando nao, tipo, nao serve pra nada
+            gameObject.SetActive(true);
+            proximaDoenca = false;
         }
     }
 
