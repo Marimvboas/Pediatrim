@@ -19,7 +19,4 @@ public class MouseEstetoscopio : MonoBehaviour
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector2(mousePosition.x - deltaX, mousePosition.y - deltaY);
     }
-
-
-
 }

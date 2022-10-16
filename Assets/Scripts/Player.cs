@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    public static int day = 0;
     public static string pos = "posInitial";
     [SerializeField] Vector3 direction;
     [SerializeField] float speed = 3f;
@@ -20,7 +21,6 @@ public class Player : MonoBehaviour
         anim = gameObject.GetComponent<Animator>();
         GameObject foise = GameObject.Find(Player.pos);
         transform.position = foise.gameObject.transform.position;
-        //Debug.Log("start: " + nomeCena);
         StartCoroutine(MoveBlocked());
         botaoE = gameObject.transform.GetChild(0).gameObject;
     }
@@ -32,10 +32,13 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && mudancaBlocked == false)
         {
             Player.pos = nomeCena;
-            //Debug.Log(nomeCena);
             SceneManager.LoadScene(nomeCena);
+            if (nomeCena.Equals("Casa"))
+            {
+                KidInstante.paciente = null;
+                Player.day += 1;
+            }
         }
-        //Debug.Log(Time.time);
     }
 
     public void Movement()
