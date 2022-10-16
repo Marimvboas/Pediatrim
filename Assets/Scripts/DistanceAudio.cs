@@ -13,21 +13,12 @@ public class DistanceAudio : MonoBehaviour
     float initialTime = 999999999f;
     float tempoAtual = 0;
 
-    void Start()
-    {
-        
-        // distance = heart.transform.position - estetos.transform.position;
-        // Debug.Log($"{distance.x}, {distance.y}, {distance.z}");
-    }
-
     void Update()
     {
-        //distance = heart.transform.position - estetos.transform.position;
         distancia = Vector3.Distance(estetos.transform.position, heart.transform.position);
 
         if (distancia <= 2)
         {
-            //Debug.Log("entrou");
 
             if (distancia < 1.01f && distancia > 0.8f)
             {
@@ -52,9 +43,6 @@ public class DistanceAudio : MonoBehaviour
         {
             aud.volume = 0;
             initialTime = 999999999f;
-        }
-        //Debug.Log($"Distancia em float: {distancia}");
-
-        
+        }        
     }
 }
