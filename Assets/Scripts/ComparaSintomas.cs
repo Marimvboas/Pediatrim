@@ -6,61 +6,22 @@ using UnityEngine.UI;
 public class ComparaSintomas : MonoBehaviour
 {
     public static string palavra1="1", palavra2="2";
-    public static bool selecionou = false;
-    [SerializeField] private GameObject texto1;
-    [SerializeField] private GameObject texto2;
+    public static bool acertou = false;
 
-    void Start()
+    public static void ChecarAcerto()
     {
-        
-    }
-
-    void Update()
-    {
-        if(selecionou){
+        //if(apertou2){
             if(palavra1.Equals(palavra2))
-            {
+            {    
                 Debug.Log("São iguais");
+                acertou = true;
             }
             else
             {
-                //Debug.Log("São diferentes");
+                acertou = false;
+                BotaoSintomaPaciente.botaoAcionado = null;
+                Debug.Log("São diferentes");
             }
-        }
-        
-    }
-
-    // void OnMouseDown(Collider2D other) {
-    //     Debug.Log("Mouse");
-    //     selecionou = !selecionou;
-    //     if(selecionou)
-    //     {
-    //         texto1 = other.gameObject;
-    //         //palavra1 = other.gameObject.GetComponent<Text>().text;
-    //         Debug.Log("Escolheu 1");
-    //     }
-    //     else
-    //     {
-    //         texto2 = gameObject;
-    //         //palavra2 = other.gameObject.GetComponent<Text>().text;
-    //         Debug.Log("Escolheu 2");
-    //     }
-    // }
-
-    public void testeButton()
-    {
-        // if(selecionou)
-        // {
-        //     texto2 = gameObject;
-        //     palavra2 = gameObject.GetComponent<Text>().text;
-        //     Debug.Log("Escolheu 1");
-        // }
-        // else
-        // {
-        //     texto1 = gameObject;
-        //     palavra1 = gameObject.GetComponent<Text>().text;
-        //     Debug.Log("Escolheu 2");
-        // }
-        // selecionou = !selecionou;
+        //}
     }
 }

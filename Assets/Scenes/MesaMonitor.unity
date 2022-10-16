@@ -2477,6 +2477,7 @@ GameObject:
   - component: {fileID: 507171066}
   - component: {fileID: 507171065}
   - component: {fileID: 507171064}
+  - component: {fileID: 507171067}
   m_Layer: 5
   m_Name: Sintoma3
   m_TagString: Untagged
@@ -2548,7 +2549,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 507171065}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 507171067}
+        m_TargetAssemblyTypeName: BotaoSintoma, Assembly-CSharp
+        m_MethodName: SelecionouSintoma
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &507171065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2587,6 +2600,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 507171062}
   m_CullTransparentMesh: 1
+--- !u!114 &507171067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507171062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f14e3b100cbf7bd40b031ad299d36c7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &575687482
 GameObject:
   m_ObjectHideFlags: 0
@@ -3543,6 +3568,7 @@ GameObject:
   - component: {fileID: 818402865}
   - component: {fileID: 818402864}
   - component: {fileID: 818402863}
+  - component: {fileID: 818402866}
   m_Layer: 5
   m_Name: Sintoma1
   m_TagString: Untagged
@@ -3614,7 +3640,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 818402864}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 818402866}
+        m_TargetAssemblyTypeName: BotaoSintomaPaciente, Assembly-CSharp
+        m_MethodName: SelecionouSintoma
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &818402864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3653,6 +3691,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 818402861}
   m_CullTransparentMesh: 1
+--- !u!114 &818402866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818402861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17e00a60b2fd9b645810d9be01065da1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &871151846
 GameObject:
   m_ObjectHideFlags: 0
@@ -5880,6 +5930,7 @@ GameObject:
   - component: {fileID: 1253846279}
   - component: {fileID: 1253846278}
   - component: {fileID: 1253846277}
+  - component: {fileID: 1253846280}
   m_Layer: 5
   m_Name: Sintoma3
   m_TagString: Untagged
@@ -5951,7 +6002,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1253846278}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1253846280}
+        m_TargetAssemblyTypeName: BotaoSintomaPaciente, Assembly-CSharp
+        m_MethodName: SelecionouSintoma
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1253846278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5990,6 +6053,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1253846275}
   m_CullTransparentMesh: 1
+--- !u!114 &1253846280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253846275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17e00a60b2fd9b645810d9be01065da1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1306785592
 GameObject:
   m_ObjectHideFlags: 0
@@ -6905,8 +6980,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48bc1fd0f01f5b1428586c4f4ebbbdc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  texto1: {fileID: 0}
-  texto2: {fileID: 0}
 --- !u!1 &1526119860
 GameObject:
   m_ObjectHideFlags: 0
@@ -7731,6 +7804,7 @@ GameObject:
   - component: {fileID: 1675599252}
   - component: {fileID: 1675599251}
   - component: {fileID: 1675599250}
+  - component: {fileID: 1675599253}
   m_Layer: 5
   m_Name: Sintoma2
   m_TagString: Untagged
@@ -7802,7 +7876,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1675599251}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1675599253}
+        m_TargetAssemblyTypeName: BotaoSintomaPaciente, Assembly-CSharp
+        m_MethodName: SelecionouSintoma
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1675599251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7841,6 +7927,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1675599248}
   m_CullTransparentMesh: 1
+--- !u!114 &1675599253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675599248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17e00a60b2fd9b645810d9be01065da1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1700513808
 GameObject:
   m_ObjectHideFlags: 0
@@ -8411,6 +8509,7 @@ GameObject:
   - component: {fileID: 1823168377}
   - component: {fileID: 1823168376}
   - component: {fileID: 1823168375}
+  - component: {fileID: 1823168378}
   m_Layer: 5
   m_Name: Sintoma2
   m_TagString: Untagged
@@ -8482,7 +8581,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1823168376}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1823168378}
+        m_TargetAssemblyTypeName: BotaoSintoma, Assembly-CSharp
+        m_MethodName: SelecionouSintoma
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1823168376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8521,6 +8632,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1823168373}
   m_CullTransparentMesh: 1
+--- !u!114 &1823168378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823168373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f14e3b100cbf7bd40b031ad299d36c7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1981257220
 GameObject:
   m_ObjectHideFlags: 0
@@ -8660,6 +8783,7 @@ GameObject:
   - component: {fileID: 1985412545}
   - component: {fileID: 1985412544}
   - component: {fileID: 1985412543}
+  - component: {fileID: 1985412546}
   m_Layer: 5
   m_Name: Sintoma1
   m_TagString: Untagged
@@ -8731,7 +8855,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1985412544}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1985412546}
+        m_TargetAssemblyTypeName: BotaoSintoma, Assembly-CSharp
+        m_MethodName: SelecionouSintoma
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1985412544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8770,6 +8906,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1985412541}
   m_CullTransparentMesh: 1
+--- !u!114 &1985412546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985412541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f14e3b100cbf7bd40b031ad299d36c7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2003285994
 GameObject:
   m_ObjectHideFlags: 0
