@@ -7,12 +7,13 @@ public class MouseEmboloSangue : MonoBehaviour
     //private Vector2 mousePosition;
     public DistanceJoint2D dist;
     private float deltaDist = 0.001f;
+    [SerializeField] GameObject congratulationButton;
 
     public GameObject sangueSeringa;
     [SerializeField] private float mlSangue;
     private float mlMax = 1f;
     private bool lockDistance = true;
-    private bool finalizou = false;
+    public static bool finalizou = false;
     public GameObject indicador;
 
     void Start()
@@ -45,6 +46,7 @@ public class MouseEmboloSangue : MonoBehaviour
         if((sangueSeringa.transform.localScale.y<mlSangue+0.04f)&&(sangueSeringa.transform.localScale.y>mlSangue-0.04f))
         {
             finalizou = true;
+            congratulationButton.SetActive(true);
             Debug.Log("final");
         } 
         else
