@@ -6,38 +6,47 @@ using UnityEngine.UI;
 public class KidInstante : MonoBehaviour
 {
     public static Paciente paciente;
+    public static GameObject pacienteObject;
     public static KidInstante Instance;
-    [SerializeField] List<GameObject> pacientes = new();
+    public static List<GameObject> pacientes;
+
     void Start()
     { 
-        if(Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            Instance = this;
-        }
-        DontDestroyOnLoad(gameObject);
+        if(pacientes == null && Player.day == 0)
+        {   
+            KidInstante.pacientes = new List<GameObject>();
 
+            KidInstante.pacientes.Add(Resources.Load<GameObject>("Prefabs/Gustavo"));
+            KidInstante.pacientes.Add(Resources.Load<GameObject>("Prefabs/Joao"));
+            KidInstante.pacientes.Add(Resources.Load<GameObject>("Prefabs/Luana da Silva"));
+            KidInstante.pacientes.Add(Resources.Load<GameObject>("Prefabs/Maria Eduarda"));
+
+            InstanciaPirralho();
+        }
+
+        if (KidInstante.paciente != null)
+        {
+            Debug.Log("entrou na paciente != null");
+            Instantiate(KidInstante.paciente.gameObject, gameObject.transform.position, Quaternion.identity, gameObject.transform);
+        }
+
+        if(!pacienteObject.transform.IsChildOf(gameObject.transform))
+        {
+            Instantiate(KidInstante.paciente.gameObject, gameObject.transform.position, Quaternion.identity, gameObject.transform);
+        }
+
+        foreach(GameObject n in pacientes)
+        {
+            Debug.Log(n.GetComponent<Paciente>().Nome);
+        }
     }
 
     public void InstanciaPirralho()
     {
-        int i = Random.Range(0, pacientes.Count);
-        Instantiate(pacientes[i], gameObject.transform.position, Quaternion.identity, gameObject.transform);
-        pacientes.RemoveAt(i);
-        paciente = GameObject.Find("KidInstantiate").transform.GetChild(0).GetComponent<Paciente>();
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            Instance = this;
-        }
-        DontDestroyOnLoad(gameObject);
-
+        GameObject kid = KidInstante.pacientes[pacientes.Count - 1];
+        Instantiate(kid, gameObject.transform.position, Quaternion.identity, gameObject.transform);
+        pacientes.RemoveAt(pacientes.Count - 1);
+        paciente = GameObject.Find("KidInstantiate").transform.GetChild(0).gameObject.GetComponent<Paciente>();
+        pacienteObject = GameObject.Find("KidInstantiate").transform.GetChild(0).gameObject;
     }
-
 }
