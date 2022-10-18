@@ -86,6 +86,7 @@ public class KidInstante : MonoBehaviour
     public void InstanciaPirralhoTeste()
     {
         blockInstantiateKid = false;
+        //gameObject.SetActive(false);
         // GameObject kid = KidInstante.pacientes[pacientes.Count - 1];
         // Instantiate(kid, gameObject.transform.position, Quaternion.identity, gameObject.transform);
         // pacientes.RemoveAt(pacientes.Count - 1);

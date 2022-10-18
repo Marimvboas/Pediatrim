@@ -18,6 +18,7 @@ public class BotaoSintoma : MonoBehaviour
             ComparaSintomas.palavra2 = textSintoma;
             apertou2 = true;
             BotaoSintomaPaciente.selecionou = false;
+            BotaoSintomaPaciente.botaoAcionado.GetComponent<Image>().color = Color.white;
             ComparaSintomas.ChecarAcerto();
         }
     }

@@ -103,7 +103,7 @@ MonoBehaviour:
   peso: 50Kg
   sexo: Masculino
   sintomas:
-  - "Incha\xE7o"
-  - "Sensa\xE7\xE3o de estufamento abdominal"
+  - "Incha\xE7os no corpo"
+  - Estufamento abdominal
   - Febre
   - ...

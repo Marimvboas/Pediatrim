@@ -19,6 +19,9 @@ public class BotaoSintomaPaciente : MonoBehaviour
             selecionou = false;
         }
         else{
+            //color normal
+            //botaoAcionado.GetComponent<Image>().color = Color.white;
+            //botaoAcionado.transform.GetChild(0).gameObject.GetComponent<Text>().color = Color.black;
             botaoAcionado.SetActive(true);
         }
 
@@ -37,5 +40,8 @@ public class BotaoSintomaPaciente : MonoBehaviour
         Debug.Log(textSintoma);
         ComparaSintomas.palavra1 = textSintoma;
         botaoAcionado = gameObject;
+        //color
+        botaoAcionado.GetComponent<Image>().color = Color.cyan;
+        //botaoAcionado.transform.GetChild(0).gameObject.GetComponent<Text>().color = Color.red;
     }
 }
