@@ -102,3 +102,8 @@ MonoBehaviour:
   altura: 1,25 m
   peso: 28Kg
   sexo: Masculino
+  sintomas:
+  - Febre
+  - Coceira
+  - "Aumento do ba\xE7o"
+  - ...

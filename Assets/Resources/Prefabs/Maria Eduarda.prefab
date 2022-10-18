@@ -102,3 +102,8 @@ MonoBehaviour:
   altura: 1,23 m
   peso: 34Kg
   sexo: Feminino
+  sintomas:
+  - Estrabismo
+  - Fotofobia
+  - Leucocoria
+  - ...

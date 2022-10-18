@@ -102,3 +102,8 @@ MonoBehaviour:
   altura: 1,20 m
   peso: 50Kg
   sexo: Masculino
+  sintomas:
+  - "Incha\xE7os no corpo"
+  - Estufamento abdominal
+  - Febre
+  - ...
