@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     [SerializeField] Animator anim;
     [SerializeField] SpriteRenderer sp;
     [SerializeField] GameObject botaoE;
+    //public static int countFinalizouExame = 0;
 
     public void Start()
     {
