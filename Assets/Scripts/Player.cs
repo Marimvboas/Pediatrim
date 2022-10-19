@@ -32,14 +32,24 @@ public class Player : MonoBehaviour
             Movement();
         if (Input.GetKeyDown(KeyCode.E) && mudancaBlocked == false)
         {
+            //day = 4;
             Player.pos = nomeCena;
-            SceneManager.LoadScene(nomeCena);
+            if(nomeCena != "CasaDialogo")
+                SceneManager.LoadScene(nomeCena);
             if (nomeCena.Equals("Casa"))
             {
                 KidInstante.paciente = null;
                 Player.day += 1;
             }
+            if (Player.day == 4 && nomeCena.Equals("CasaDialogo"))
+            {
+                
+                GameObject temp = GameObject.Find("Dialogo");
+                temp.GetComponent<DialogoCasa>().activecontrol = true;
+                temp.GetComponent<DialogoCasa>().digite = true;
+            }
         }
+
     }
 
     public void Movement()
