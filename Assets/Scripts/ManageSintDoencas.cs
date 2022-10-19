@@ -13,7 +13,7 @@ public class ManageSintDoencas : MonoBehaviour
     {
         tipoDoenca = transform.GetChild(0).gameObject.GetComponent<Text>().text;
         verDoenca = true;
-        ComparaSintomas.count = 0;
+        Player.count = 0;
         BotaoSintomaPaciente.proximaDoenca = true;
         ComparaSintomas.acertou = false;
         BotaoSintoma.apertou2 = false;

@@ -8,7 +8,8 @@ public class DocManage : MonoBehaviour
 
     public void OpenDocument()
     {
-        content.SetActive(true);
+        if(content!=null)
+            content.SetActive(true);
     }
 
     public void CloseDocument()

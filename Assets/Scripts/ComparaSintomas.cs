@@ -7,7 +7,7 @@ public class ComparaSintomas : MonoBehaviour
 {
     public static string palavra1="1", palavra2="2";
     public static bool acertou = false;
-    public static int count = 0;
+    //public static int count = 0;
     //public static bool finalExame = false;
 
     public static void ChecarAcerto()
@@ -17,7 +17,7 @@ public class ComparaSintomas : MonoBehaviour
             {    
                 Debug.Log("São iguais");
                 acertou = true;
-                count++; //conta a quantidade de acertos
+                Player.count++; //conta a quantidade de acertos
             }
             else
             {
@@ -26,7 +26,7 @@ public class ComparaSintomas : MonoBehaviour
                 Debug.Log("São diferentes");
             }
         //}
-        if(count == 3){
+        if(Player.count == 3){
             //
             //GameObject.Find("SetaVerde").SetActive(true);
             GameObject.Find("SetaVerde").transform.GetChild(0).gameObject.GetComponent<Text>().text = "Finalizar Consulta";
