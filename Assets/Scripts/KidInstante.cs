@@ -10,7 +10,8 @@ public class KidInstante : MonoBehaviour
     public static KidInstante Instance;
     public static List<GameObject> pacientes;
     public static bool blockInstantiateKid = true;
-    public static GameObject setaVerde;
+    //public static bool blockSetaVerde = false;
+    //public static GameObject setaVerde;
 
     void Awake() 
     {
@@ -25,6 +26,7 @@ public class KidInstante : MonoBehaviour
 
             //InstanciaPirralho();
         }
+        //setaVerde = GameObject.Find("SetaVerde");
     }
 
     void Start()
@@ -34,9 +36,14 @@ public class KidInstante : MonoBehaviour
         {
             
             InstanciaPirralho();
-        } else {
             
-        }
+        } 
+        // else if(paciente==null&&blockSetaVerde){
+        //     GameObject.Find("SetaVerde").SetActive(false);
+        // } else {
+        //     GameObject.Find("SetaVerde").SetActive(true);
+        // }
+
         // foreach(GameObject n in pacientes)
         // {
         //     Debug.Log(n.GetComponent<Paciente>().Nome);

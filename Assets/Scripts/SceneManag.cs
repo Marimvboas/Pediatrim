@@ -12,6 +12,7 @@ public class SceneManag : MonoBehaviour
         if((cenaName=="Casa")&&(ComparaSintomas.count==3)){
             Player.day++; 
             ComparaSintomas.count = 0;
+            KidInstante.blockInstantiateKid = false;
             //Player.countFinalizouExame = 0;
             Debug.Log("Day:"+Player.day);
         } 

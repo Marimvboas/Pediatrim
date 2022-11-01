@@ -33,6 +33,7 @@ public class ComparaSintomas : MonoBehaviour
             Debug.Log("Acertou os três sintomas");
             //finalExame = true;
             //Player.countFinalizouExame = count;
+            //KidInstante.blockSetaVerde =true;
             MouseEmboloSangue.finalizou = false;
         } else {
             //GameObject.Find("SetaVerde").SetActive(true);
