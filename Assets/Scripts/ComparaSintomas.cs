@@ -31,6 +31,7 @@ public class ComparaSintomas : MonoBehaviour
             //GameObject.Find("SetaVerde").SetActive(true);
             GameObject.Find("SetaVerde").transform.GetChild(0).gameObject.GetComponent<Text>().text = "Finalizar Consulta";
             Debug.Log("Acertou os três sintomas");
+            KidInstante.kid=null;
             //finalExame = true;
             //Player.countFinalizouExame = count;
             MouseEmboloSangue.finalizou = false;

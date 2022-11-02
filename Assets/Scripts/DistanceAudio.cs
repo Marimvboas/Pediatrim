@@ -12,6 +12,7 @@ public class DistanceAudio : MonoBehaviour
     public AudioSource aud;
     float initialTime = 999999999f;
     float tempoAtual = 0;
+    public static bool terminouExame = false;
 
     void Update()
     {
@@ -35,6 +36,7 @@ public class DistanceAudio : MonoBehaviour
                 congratulationButton.SetActive(true);
                 heart.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 2;
                 Debug.Log("Entrou ultimo if");
+                terminouExame = true;
             }
 
             aud.volume = 1-(distancia/2);

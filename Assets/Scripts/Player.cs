@@ -16,7 +16,8 @@ public class Player : MonoBehaviour
     [SerializeField] SpriteRenderer sp;
     [SerializeField] GameObject botaoE;
     //public static int countFinalizouExame = 0;
-    public static int count = 0;
+    public static int count = 0; //contador da quantidade de sintomas linkados corretamente
+    public static float pontoConfianca = 1f; //ponto de confiança
 
     public void Start()
     {
@@ -41,6 +42,7 @@ public class Player : MonoBehaviour
             if (nomeCena.Equals("Casa"))
             {
                 KidInstante.paciente = null;
+                KidInstante.kid=null;
                 Debug.Log(Player.count);
 
                 if ((Player.count == 3))
