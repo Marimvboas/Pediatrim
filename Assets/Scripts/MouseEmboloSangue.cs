@@ -52,8 +52,7 @@ public class MouseEmboloSangue : MonoBehaviour
         else
         {
             lockDistance = true;
-        }
-        
+        }        
     }
  
     private void OnMouseDrag()

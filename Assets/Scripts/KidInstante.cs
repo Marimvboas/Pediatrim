@@ -11,6 +11,7 @@ public class KidInstante : MonoBehaviour
     public static List<GameObject> pacientes;
     public static bool blockInstantiateKid = true;
     public static GameObject setaVerde;
+    public static GameObject kid;
 
     void Awake() 
     {
@@ -46,11 +47,15 @@ public class KidInstante : MonoBehaviour
     public void InstanciaPirralho()
     {
         blockInstantiateKid = true;
-        GameObject kid = KidInstante.pacientes[Player.day];
-        Instantiate(kid, gameObject.transform.position, Quaternion.identity, gameObject.transform);
-        //pacientes.RemoveAt(pacientes.Count - 1);
-        paciente = GameObject.Find("KidInstantiate").transform.GetChild(0).gameObject.GetComponent<Paciente>();
-        pacienteObject = GameObject.Find("KidInstantiate").transform.GetChild(0).gameObject;
+        if (Player.day < 4)
+        {
+            kid = KidInstante.pacientes[Player.day];
+            Instantiate(kid, gameObject.transform.position, Quaternion.identity, gameObject.transform);
+            //pacientes.RemoveAt(pacientes.Count - 1);
+            paciente = GameObject.Find("KidInstantiate").transform.GetChild(0).gameObject.GetComponent<Paciente>();
+            pacienteObject = GameObject.Find("KidInstantiate").transform.GetChild(0).gameObject;
+        }
+        
     }
 
     public void InstanciaPirralhoTeste()

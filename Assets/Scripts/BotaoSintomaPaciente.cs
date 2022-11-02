@@ -13,12 +13,13 @@ public class BotaoSintomaPaciente : MonoBehaviour
 
     public void Update()
     {
-        if(ComparaSintomas.acertou && BotaoSintoma.apertou2)
+        if(ComparaSintomas.acertou && BotaoSintoma.apertou2 && botaoAcionado != null)
         {
             botaoAcionado.SetActive(false);
             selecionou = false;
         }
-        else{
+        else if(botaoAcionado != null)
+        {
             //color normal
             //botaoAcionado.GetComponent<Image>().color = Color.white;
             //botaoAcionado.transform.GetChild(0).gameObject.GetComponent<Text>().color = Color.black;

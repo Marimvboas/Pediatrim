@@ -10,11 +10,13 @@ public class Player : MonoBehaviour
     [SerializeField] Vector3 direction;
     [SerializeField] float speed = 3f;
     [SerializeField] bool moveIsBlocked = true, mudancaBlocked;
+    //public static string nomeCena ="SalaDeEspera";
     [SerializeField] string nomeCena;
     [SerializeField] Animator anim;
     [SerializeField] SpriteRenderer sp;
     [SerializeField] GameObject botaoE;
     //public static int countFinalizouExame = 0;
+    public static int count = 0;
 
     public void Start()
     {
@@ -32,14 +34,33 @@ public class Player : MonoBehaviour
             Movement();
         if (Input.GetKeyDown(KeyCode.E) && mudancaBlocked == false)
         {
+            //day = 4;
             Player.pos = nomeCena;
-            SceneManager.LoadScene(nomeCena);
+            if(nomeCena != "CasaDialogo")
+                SceneManager.LoadScene(nomeCena);
             if (nomeCena.Equals("Casa"))
             {
                 KidInstante.paciente = null;
-                Player.day += 1;
+                Debug.Log(Player.count);
+
+                if ((Player.count == 3))
+                {
+                    Player.day += 1;
+                    Player.count = 0;
+                    //Player.countFinalizouExame = 0;
+                    Debug.Log("Day:" + Player.day);
+                }
+                //Player.day += 1;
+            }
+            if (Player.day == 4 && nomeCena.Equals("CasaDialogo"))
+            {
+                
+                GameObject temp = GameObject.Find("Dialogo");
+                temp.GetComponent<DialogoCasa>().activecontrol = true;
+                temp.GetComponent<DialogoCasa>().digite = true;
             }
         }
+
     }
 
     public void Movement()

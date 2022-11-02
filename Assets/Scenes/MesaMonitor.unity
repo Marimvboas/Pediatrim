@@ -4074,7 +4074,6 @@ GameObject:
   - component: {fileID: 940341205}
   - component: {fileID: 940341207}
   - component: {fileID: 940341206}
-  - component: {fileID: 940341208}
   - component: {fileID: 940341209}
   m_Layer: 5
   m_Name: SpeechDoctor
@@ -4142,23 +4141,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 940341204}
   m_CullTransparentMesh: 1
---- !u!114 &940341208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 940341204}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 931af39c55bc29f41890f272dcca120b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spechBaloon: {fileID: 940341204}
-  nextBalloon: {fileID: 952896751}
-  typingSpeed: 0
-  activecontrol: 0
-  spechBaloonText: {fileID: 84283799}
 --- !u!114 &940341209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4203,7 +4185,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 940341208}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogoDoctor, Assembly-CSharp
         m_MethodName: NextSentence
         m_Mode: 1
@@ -4387,6 +4369,7 @@ GameObject:
   - component: {fileID: 952896753}
   - component: {fileID: 952896756}
   - component: {fileID: 952896755}
+  - component: {fileID: 952896757}
   m_Layer: 5
   m_Name: SpeechPaciente
   m_TagString: Untagged
@@ -4460,7 +4443,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 952896751}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -4523,6 +4506,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spechBaloon: {fileID: 952896751}
   nextBalloon: {fileID: 940341204}
+  dialogos1:
+  - "M\xC3E: Meu filho sentiu muita febre a noite esses dias, ent\xE3o eu vim logo
+    para ver o qu\xEA que ele tem, minha fam\xEDlia inteira vivia indo ao m\xE9dico
+    na inf\xE2ncia. Agora ele come\xE7ou a co\xE7ar a pele, coitado. Ele tem faltado
+    aula por causa disso, ent\xE3o eu sei que ele t\xE1 bem feliz, mas tem que saber
+    se ele t\xE1 bem n\xE9, doutor!"
+  - 'DOUTOR: Vou fazer uma checagem nele em um instante.'
+  dialogos2:
+  - 'PAI: OI doc'
+  - "DOC: N\xE3o"
+  typingSpeed: 0
+  activecontrol: 0
+  spechBaloonText: {fileID: 1748744221}
+--- !u!114 &952896757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952896751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 931af39c55bc29f41890f272dcca120b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spechBaloon: {fileID: 952896751}
+  nextBalloon: {fileID: 940341204}
+  dialogos1:
+  - 'DOUTOR: oi'
+  - 'PACIENTE: tchau'
+  dialogos2: []
   typingSpeed: 0
   activecontrol: 0
   spechBaloonText: {fileID: 1748744221}
@@ -6217,7 +6231,7 @@ SpriteRenderer:
   m_Size: {x: 5.04, y: 2.94}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1317886909
@@ -8830,7 +8844,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.6575017, y: -381.3003}
+  m_AnchoredPosition: {x: 3.6575012, y: -381.3003}
   m_SizeDelta: {x: 415.8, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1823168375
@@ -9104,7 +9118,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.6575017, y: -321.29974}
+  m_AnchoredPosition: {x: 3.6575012, y: -321.29974}
   m_SizeDelta: {x: 415.8, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1985412543

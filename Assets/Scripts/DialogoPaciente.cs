@@ -4,19 +4,50 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogoPaciente : MonoBehaviour
-{
+{//
 	//Script Inspirado no script criado pelo canal do Youtube "Crie Seus Jogos"
 	public GameObject spechBaloon, nextBalloon;
+	public string[] dialogos1;
+	public string[] dialogos2;
 	string[] dialogos;
 	public float typingSpeed;
 	public bool activecontrol;
 	public static int iP;
 	public Text spechBaloonText;
+	public static bool falaPaciente = false;
+	public static bool blockFala = false;
 
     public void Start()
     {
-		Falas(Dialogo1.dialogues);
-		activecontrol = true;
+		//Falas(Dialogo1.dialogues);
+		if(KidInstante.kid!=null){
+			falaPaciente = true;
+			// dialogos = dialogos1;
+			// Falas(dialogos1);
+			// activecontrol = true;
+		}
+		if(falaPaciente && (!blockFala)){
+			
+			switch(Player.day){
+				case 0:{
+					dialogos = dialogos1;
+					Falas(dialogos1);
+					activecontrol = true;
+					break;
+				}
+				case 1:{
+					dialogos = dialogos2;
+					Falas(dialogos2);
+					activecontrol = true;
+					break;
+				}
+			}
+			activecontrol = true;
+		}
+		if(Player.count == 3){
+			blockFala = false;
+		}
+		
 	}
 
     public void Falas(string[] txt)
@@ -37,35 +68,49 @@ public class DialogoPaciente : MonoBehaviour
 
 	public void NextSentence()
 	{
-		if (spechBaloonText.text == dialogos[iP])
+		//if (spechBaloonText.text == dialogos[iP])
 		{
-			if (iP < dialogos.Length - 1)
+			if ((iP < dialogos.Length - 1)) 
 			{
 				iP++;
 				spechBaloonText.text = "";
-				spechBaloon.SetActive(false);
+				//spechBaloon.SetActive(false);
+				StartCoroutine(TypingDialogues());
 			}
 			else
 			{
 				spechBaloonText.text = "";
 				iP = 0;
+				//falaPaciente = false;
+				blockFala = true;
 				spechBaloon.SetActive(false);
 			}
+
 		}
 	}
 
     public void Update()
     {
-		if (Input.GetMouseButtonDown(0))
+		if (Input.GetKeyDown(KeyCode.Space))
 		{
-			NextSentence();			
+			if (spechBaloonText.text == dialogos[iP]){
+				NextSentence();	
+			} else {
+				
+				//StopCoroutine(TypingDialogues());
+				//spechBaloonText.text = "";
+				//spechBaloonText.text = dialogos[iP];
+			}
+
 		}
+		
+
 	}
 }
 
 public static class Dialogo1
 {
-	public static string dialogue1 = "Meu filho sentiu muita \bfebre\b à noite esses dias, então eu vim logo para ver o quê que ele tem, minha família inteira vivia indo ao médico na infância. Agora ele começou a \bcoçar a pele\b, coitado. Ele tem faltado aula por causa disso, então eu sei que ele tá bem feliz, mas tem que saber se ele tá bem né, doutor!";
+	public static string dialogue1 = "Meu filho sentiu muita \bfebre\b ï¿½ noite esses dias, entï¿½o eu vim logo para ver o quï¿½ que ele tem, minha famï¿½lia inteira vivia indo ao mï¿½dico na infï¿½ncia. Agora ele comeï¿½ou a \bcoï¿½ar a pele\b, coitado. Ele tem faltado aula por causa disso, entï¿½o eu sei que ele tï¿½ bem feliz, mas tem que saber se ele tï¿½ bem nï¿½, doutor!";
 	public static string dialogue2 = "Nossa, quem diria! Muito obrigado, doutor!";
 
 	public static string dialogue3 = "";
@@ -79,7 +124,7 @@ public static class Dialogo1
 public static class Dialogo2
 {
 	public static string dialogue1 = "Vou fazer uma checagem nele em um instante";
-	public static string dialogue2 = "Você fez certo em vir com antecedência, é bem possível que ele esteja com caso de Linfoma. O que acontece é que seu filho muito provavelmente tem o sistema imunológico comprometido por doenças genéticas, o que estaria afetando os linfócitos do seu corpo. É preciso que você vá a um Ortopedista para checar qualquer inchaço nos revestimentos do pescoço, axila ou virilha, como notei um pequeno aumento na região do abdômen";
+	public static string dialogue2 = "Vocï¿½ fez certo em vir com antecedï¿½ncia, ï¿½ bem possï¿½vel que ele esteja com caso de Linfoma. O que acontece ï¿½ que seu filho muito provavelmente tem o sistema imunolï¿½gico comprometido por doenï¿½as genï¿½ticas, o que estaria afetando os linfï¿½citos do seu corpo. ï¿½ preciso que vocï¿½ vï¿½ a um Ortopedista para checar qualquer inchaï¿½o nos revestimentos do pescoï¿½o, axila ou virilha, como notei um pequeno aumento na regiï¿½o do abdï¿½men";
 	
 	public static string dialogue3 = "";
 	public static string dialogue4 = "";
