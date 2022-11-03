@@ -43,16 +43,17 @@ public class Player : MonoBehaviour
             {
                 KidInstante.paciente = null;
                 KidInstante.kid=null;
+                Debug.Log("kid: "+KidInstante.kid);
                 Debug.Log(Player.count);
 
                 if ((Player.count == 3))
                 {
                     Player.day += 1;
                     Player.count = 0;
+                    DialogoPaciente.blockFala = false;
                     //Player.countFinalizouExame = 0;
                     Debug.Log("Day:" + Player.day);
                 }
-                //Player.day += 1;
             }
             if (Player.day == 4 && nomeCena.Equals("CasaDialogo"))
             {

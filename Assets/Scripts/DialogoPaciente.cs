@@ -9,6 +9,8 @@ public class DialogoPaciente : MonoBehaviour
 	public GameObject spechBaloon, nextBalloon;
 	public string[] dialogos1;
 	public string[] dialogos2;
+	public string[] dialogos3;
+	public string[] dialogos4;
 	string[] dialogos;
 	public float typingSpeed;
 	public bool activecontrol;
@@ -25,7 +27,13 @@ public class DialogoPaciente : MonoBehaviour
 			// dialogos = dialogos1;
 			// Falas(dialogos1);
 			// activecontrol = true;
+			Debug.Log("Kid != null");
+			Debug.Log("kid: "+KidInstante.kid);
+		} else {
+			falaPaciente = false;
 		}
+		Debug.Log("FalaPaciente: "+falaPaciente);
+		Debug.Log("blockFala: "+blockFala);
 		if(falaPaciente && (!blockFala)){
 			
 			switch(Player.day){
@@ -33,12 +41,32 @@ public class DialogoPaciente : MonoBehaviour
 					dialogos = dialogos1;
 					Falas(dialogos1);
 					activecontrol = true;
+					Debug.Log("dialogos1 antes da consulta");
+					falaPaciente = false;
 					break;
 				}
 				case 1:{
 					dialogos = dialogos2;
 					Falas(dialogos2);
 					activecontrol = true;
+					Debug.Log("dialogos2 antes da consulta");
+					falaPaciente = false;
+					break;
+				}
+				case 2:{
+					dialogos = dialogos3;
+					Falas(dialogos3);
+					activecontrol = true;
+					Debug.Log("dialogos3 antes da consulta");
+					falaPaciente = false;
+					break;
+				}
+				case 3:{
+					dialogos = dialogos4;
+					Falas(dialogos4);
+					activecontrol = true;
+					Debug.Log("dialogos4 antes da consulta");
+					falaPaciente = false;
 					break;
 				}
 			}
@@ -93,7 +121,7 @@ public class DialogoPaciente : MonoBehaviour
     {
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
-			if (spechBaloonText.text == dialogos[iP]){
+			if (spechBaloonText.text == dialogos[iP]){ //essa linha
 				NextSentence();	
 			} else {
 				
@@ -108,28 +136,28 @@ public class DialogoPaciente : MonoBehaviour
 	}
 }
 
-public static class Dialogo1
-{
-	public static string dialogue1 = "Meu filho sentiu muita \bfebre\b � noite esses dias, ent�o eu vim logo para ver o qu� que ele tem, minha fam�lia inteira vivia indo ao m�dico na inf�ncia. Agora ele come�ou a \bco�ar a pele\b, coitado. Ele tem faltado aula por causa disso, ent�o eu sei que ele t� bem feliz, mas tem que saber se ele t� bem n�, doutor!";
-	public static string dialogue2 = "Nossa, quem diria! Muito obrigado, doutor!";
+// public static class Dialogo1
+// {
+// 	public static string dialogue1 = "Meu filho sentiu muita \bfebre\b � noite esses dias, ent�o eu vim logo para ver o qu� que ele tem, minha fam�lia inteira vivia indo ao m�dico na inf�ncia. Agora ele come�ou a \bco�ar a pele\b, coitado. Ele tem faltado aula por causa disso, ent�o eu sei que ele t� bem feliz, mas tem que saber se ele t� bem n�, doutor!";
+// 	public static string dialogue2 = "Nossa, quem diria! Muito obrigado, doutor!";
 
-	public static string dialogue3 = "";
-	public static string dialogue4 = "";
+// 	public static string dialogue3 = "";
+// 	public static string dialogue4 = "";
 	
-	public static string dialogue5 = "";
+// 	public static string dialogue5 = "";
 	
-	public static string[] dialogues= new string[2] { dialogue1, dialogue2 };
-}
+// 	public static string[] dialogues= new string[2] { dialogue1, dialogue2 };
+// }
 
-public static class Dialogo2
-{
-	public static string dialogue1 = "Vou fazer uma checagem nele em um instante";
-	public static string dialogue2 = "Voc� fez certo em vir com anteced�ncia, � bem poss�vel que ele esteja com caso de Linfoma. O que acontece � que seu filho muito provavelmente tem o sistema imunol�gico comprometido por doen�as gen�ticas, o que estaria afetando os linf�citos do seu corpo. � preciso que voc� v� a um Ortopedista para checar qualquer incha�o nos revestimentos do pesco�o, axila ou virilha, como notei um pequeno aumento na regi�o do abd�men";
+// public static class Dialogo2
+// {
+// 	public static string dialogue1 = "Vou fazer uma checagem nele em um instante";
+// 	public static string dialogue2 = "Voc� fez certo em vir com anteced�ncia, � bem poss�vel que ele esteja com caso de Linfoma. O que acontece � que seu filho muito provavelmente tem o sistema imunol�gico comprometido por doen�as gen�ticas, o que estaria afetando os linf�citos do seu corpo. � preciso que voc� v� a um Ortopedista para checar qualquer incha�o nos revestimentos do pesco�o, axila ou virilha, como notei um pequeno aumento na regi�o do abd�men";
 	
-	public static string dialogue3 = "";
-	public static string dialogue4 = "";
+// 	public static string dialogue3 = "";
+// 	public static string dialogue4 = "";
 	
-	public static string dialogue5 = "";
+// 	public static string dialogue5 = "";
 	
-	public static string[] dialogues = new string[2] { dialogue1, dialogue2 };
-}
+// 	public static string[] dialogues = new string[2] { dialogue1, dialogue2 };
+// }

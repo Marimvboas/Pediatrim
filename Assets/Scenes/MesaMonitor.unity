@@ -4111,7 +4111,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 940341204}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -4149,7 +4149,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 940341204}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -4185,19 +4185,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 940341206}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DialogoDoctor, Assembly-CSharp
-        m_MethodName: NextSentence
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &948733589
 GameObject:
   m_ObjectHideFlags: 0
@@ -4510,13 +4498,43 @@ MonoBehaviour:
   dialogos1:
   - "M\xC3E: Meu filho sentiu muita febre a noite esses dias, ent\xE3o eu vim logo
     para ver o qu\xEA que ele tem, minha fam\xEDlia inteira vivia indo ao m\xE9dico
-    na inf\xE2ncia. Agora ele come\xE7ou a co\xE7ar a pele, coitado. Ele tem faltado
-    aula por causa disso, ent\xE3o eu sei que ele t\xE1 bem feliz, mas tem que saber
-    se ele t\xE1 bem n\xE9, doutor!"
+    na inf\xE2ncia. Agora ele come\xE7ou a co\xE7ar a pele, coitado. "
+  - "M\xC3E: Ele tem faltado aula por causa disso, ent\xE3o eu sei que ele t\xE1
+    bem feliz, mas tem que saber se ele t\xE1 bem n\xE9, doutor!"
   - 'DOUTOR: Vou fazer uma checagem nele em um instante.'
   dialogos2:
-  - 'PAI: OI doc'
-  - "DOC: N\xE3o"
+  - "Respons\xE1vel: \u201CDoutor! Meu filho est\xE1 com dores no abd\xF4men e incha\xE7o,
+    estou preocupado, o que devo fazer?!\u201D"
+  - "Paciente: \u201Chmm\u2026 (reclamando das dores)\u201D"
+  - "M\xE9dico: \"Calma, calma, vamos realizar alguns exames e ver o que podemos
+    fazer!\u201D"
+  dialogos3:
+  - "Pediatra: \u201CLuana, ol\xE1! Voc\xEA de novo por aqui, tudo bem contigo?\u201D"
+  - "Paciente: \u201CEstou bem, mas t\xF4 triste porque ainda tenho sentido muitas
+    dores nas pernas, n\xE3o posso andar de skate assim\u201D"
+  - "Respons\xE1vel: \u201CDoutor, eu estava reparando um incha\xE7o no local que
+    ela reclamou de dor, estou muito preocupada\"."
+  - "Pediatra: \u201CVamos olhar isso agora, trouxe o Raio-X que pedi para analis\xE1-lo?\u201D. "
+  - "Respons\xE1vel: \u201CAqui est\xE1\u201D"
+  - "Pediatra:  \u201CBem, \xE9 poss\xEDvel ver um n\xF3dulo bem pequeno na perna
+    direita dela\u201D"
+  dialogos4:
+  - "Respons\xE1vel: \u201CBoa tarde Doutor, trouxe minha filha aqui hoje porque
+    ouvi falar muito bem do seu trabalho, ela tem estrabismo desde os 5 anos, al\xE9m
+    de outros problemas nas vistas, mas a gente n\xE3o tem muita condi\xE7\xE3o financeira
+    para cuidar, gra\xE7as a Deus que o SUS existe.\""
+  - "Respons\xE1vel: \" Ah, desculpa falar demais doutor, sei que ela veio aqui s\xF3
+    para um check-up geral, j\xE1 que o senhor \xE9 um pediatra rsrsrs, ah uma observa\xE7\xE3o
+    fui tirar uma foto dela e uma das pupilas estavam brancas.\u201D"
+  - "Pediatra: \u201C Tudo bem senhora, \xE9 sempre bom saber a hist\xF3ria de meus
+    pacientes, assim posso cuidar deles melhor, vamos ent\xE3o checar a mocinha.
+    Ent\xE3o quando voc\xEA foi tirar uma foto dessa mocinha, uma das pupilas estava
+    branca, certo?\""
+  - "Respons\xE1vel: \u201Csim doutor\u201D"
+  - "Pediatra:\u201DCerto, quando a senhora chega perto ou ela passa perto de uma
+    luz natural ou artificial parece que ela est\xE1 olhando diretamente para o sol?\u201D."
+  - "Respons\xE1vel: \u201CSim, uai doutor o senhor est\xE1 com os sentidos agu\xE7ados.\u201D"
+  - "Pediatra: \u201CHm, isso pode ser fotofobia\u201D"
   typingSpeed: 0
   activecontrol: 0
   spechBaloonText: {fileID: 1748744221}
@@ -4535,9 +4553,34 @@ MonoBehaviour:
   spechBaloon: {fileID: 952896751}
   nextBalloon: {fileID: 940341204}
   dialogos1:
-  - 'DOUTOR: oi'
-  - 'PACIENTE: tchau'
-  dialogos2: []
+  - "DOUTOR: Voc\xEA fez certo em vir com anteced\xEAncia, \xE9 bem poss\xEDvel que
+    ele esteja com caso de Linfoma. O que acontece \xE9 que seu filho muito provavelmente
+    tem o sistema imunol\xF3gico comprometido por doen\xE7as gen\xE9ticas, o que
+    estaria afetando os linf\xF3citos do seu corpo. "
+  - "DOUTOR: \xC9 preciso que voc\xEA v\xE1 um Ortopedista para checar qualquer incha\xE7o
+    nos revestimentos do pesco\xE7o, axila ou virilha, como notei um pequeno aumento
+    na regi\xE3o do abd\xF4men."
+  - "M\xC3E: Nossa, quem diria! Muito obrigado, doutor!"
+  dialogos2:
+  - "M\xE9dico: \u201CSenhor!, o quanto antes voc\xEA puder procurar por cirurgi\xE3o,
+    oncologista pedi\xE1trico ou um radio oncologista melhor, pois a suspeita \xE9
+    que ele esteja com neuroblastoma na regi\xE3o abdominal.\u201D"
+  - "Respons\xE1vel: \u201CCerto doutor! Farei isso agora mesmo!\u201D "
+  - "M\xE9dico: \"huuuuuuuumm (PENSAMENTO: que PAI bom!)\""
+  dialogos3:
+  - "Pediatra: \u201C Com os novos resultados que surgiram recentemente, esse n\xF3dulo
+    na perna dela precisa ser investigado, para sabermos do que se trata, se \xE9
+    benigno ou n\xE3o. \""
+  - "Pediatra: \"Ele ainda est\xE1 bem pequeno porque voc\xEAs vieram logo no in\xEDcio,
+    as chances de sucesso s\xE3o bem altas mas a Luana precisa ser encaminhada a
+    um ortopedista ou onco-ortopedista para retirar esse n\xF3dulo e analis\xE1-lo\u2026\u201D"
+  - "Respons\xE1vel: \u201C Muito obrigada Doutor!\u2026\u201D"
+  dialogos4:
+  - "Pediatra: \u201COlha, o IMC dela est\xE1 bom, o peso e altura est\xE3o de acordo
+    como esperado para a idade, mas estou preocupado com a situa\xE7\xE3o das vistas
+    dela, preciso encaminh\xE1-la ao oftalmologista para ver isso\u201D"
+  - "Respons\xE1vel: \"T\xE1 bom ent\xE3o\""
+  - 'Pediatra: "Okay"'
   typingSpeed: 0
   activecontrol: 0
   spechBaloonText: {fileID: 1748744221}
