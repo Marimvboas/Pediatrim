@@ -65,7 +65,7 @@ public class DialogoDoctor : MonoBehaviour
 
 	public void Update()
 	{
-		if((Player.count==3) &&(!blockFalaUpdate)){ // Player.count conta a quantidade de sintomas acertados na linkagem
+		if((Player.count==3) && (!blockFalaUpdate)){ // Player.count conta a quantidade de sintomas acertados na linkagem
 			//dialogo final do paciente	
 			switch(Player.day){
 				case 0: {
@@ -94,7 +94,7 @@ public class DialogoDoctor : MonoBehaviour
 			blockFalaUpdate = true;
 		}
 		
-		if (Input.GetKeyDown(KeyCode.Space))
+		if (Input.GetKeyDown(KeyCode.Space)&&(Player.count==3))
 		{
 			NextSentence();
 		}
