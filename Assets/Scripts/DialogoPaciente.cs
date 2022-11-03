@@ -119,7 +119,7 @@ public class DialogoPaciente : MonoBehaviour
 
     public void Update()
     {
-		if (Input.GetKeyDown(KeyCode.Space))
+		if (Input.GetKeyDown(KeyCode.Space)&&((Player.count!=3)))
 		{
 			if (spechBaloonText.text == dialogos[iP]){ //essa linha
 				NextSentence();	
@@ -131,33 +131,5 @@ public class DialogoPaciente : MonoBehaviour
 			}
 
 		}
-		
-
 	}
 }
-
-// public static class Dialogo1
-// {
-// 	public static string dialogue1 = "Meu filho sentiu muita \bfebre\b � noite esses dias, ent�o eu vim logo para ver o qu� que ele tem, minha fam�lia inteira vivia indo ao m�dico na inf�ncia. Agora ele come�ou a \bco�ar a pele\b, coitado. Ele tem faltado aula por causa disso, ent�o eu sei que ele t� bem feliz, mas tem que saber se ele t� bem n�, doutor!";
-// 	public static string dialogue2 = "Nossa, quem diria! Muito obrigado, doutor!";
-
-// 	public static string dialogue3 = "";
-// 	public static string dialogue4 = "";
-	
-// 	public static string dialogue5 = "";
-	
-// 	public static string[] dialogues= new string[2] { dialogue1, dialogue2 };
-// }
-
-// public static class Dialogo2
-// {
-// 	public static string dialogue1 = "Vou fazer uma checagem nele em um instante";
-// 	public static string dialogue2 = "Voc� fez certo em vir com anteced�ncia, � bem poss�vel que ele esteja com caso de Linfoma. O que acontece � que seu filho muito provavelmente tem o sistema imunol�gico comprometido por doen�as gen�ticas, o que estaria afetando os linf�citos do seu corpo. � preciso que voc� v� a um Ortopedista para checar qualquer incha�o nos revestimentos do pesco�o, axila ou virilha, como notei um pequeno aumento na regi�o do abd�men";
-	
-// 	public static string dialogue3 = "";
-// 	public static string dialogue4 = "";
-	
-// 	public static string dialogue5 = "";
-	
-// 	public static string[] dialogues = new string[2] { dialogue1, dialogue2 };
-// }
